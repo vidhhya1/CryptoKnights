@@ -1,59 +1,122 @@
-# Bitcoin Scripting Assignment
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Scripting Assignment</title>
+</head>
+<body>
 
-**Assignment 3: Bitcoin Scripting**  
+    <h1>Bitcoin Scripting Assignment</h1>
 
-## Team Members:
-- **Janapareddy Vidya Varshini** - Roll No:230041013
-- **Korubilli Vaishnavi** - Roll No: 230041016
-- **Mullapudi Namaswi** - Roll No:230041023
+    <h2>CS 216: Introduction to Blockchain</h2>
 
+    <h3>Assignment 3: Bitcoin Scripting</h3>
 
-## Overview  
-This project demonstrates the creation and validation of Bitcoin transactions using:
-  1.Legacy (P2PKH) Transactions
-  2.SegWit (P2SH-P2WPKH) Transactions
+    <h2>Team Members:</h2>
+    <ul>
+        <li><strong>Name 1</strong> (Roll Number 1)</li>
+        <li><strong>Name 2</strong> (Roll Number 2)</li>
+        <li><strong>Name 3</strong> (Roll Number 3)</li>
+    </ul>
 
-We use Bitcoin Core (bitcoind) in regtest mode and Python scripts to interact with it via RPC calls.  <br>
-The project includes:
- Setting up a Bitcoin regtest network.
- Creating wallets and generating addresses.
- Funding transactions and analyzing scripts.
- Comparing transaction sizes between Legacy and SegWit formats.
+    <h2>Project Overview</h2>
+    <p>This project demonstrates the creation and validation of Bitcoin transactions using:</p>
+    <ul>
+        <li><strong>Legacy (P2PKH) Transactions</strong></li>
+        <li><strong>SegWit (P2SH-P2WPKH) Transactions</strong></li>
+    </ul>
 
+    <p>We use <strong>Bitcoin Core (bitcoind)</strong> in regtest mode and Python scripts to interact with it via RPC calls. The project includes:</p>
+    <ul>
+        <li>Setting up a Bitcoin regtest network.</li>
+        <li>Creating wallets and generating addresses.</li>
+        <li>Funding transactions and analyzing scripts.</li>
+        <li>Comparing transaction sizes between Legacy and SegWit formats.</li>
+    </ul>
 
+    <hr>
 
-## Running the Project ##
+    <h2>Prerequisites</h2>
 
-Step 1: Start Bitcoin Daemon
+    <h3>Install Dependencies</h3>
+    <p>Ensure you have the following installed:</p>
+    <ul>
+        <li><strong>Bitcoin Core</strong>: <a href="https://bitcoincore.org/en/download/">Download Bitcoin Core</a></li>
+        <li><strong>Python3</strong> (if not installed, install via <code>sudo apt install python3</code> or <code>brew install python3</code>)</li>
+        <li><strong>Required Python Libraries</strong>:</li>
+    </ul>
 
-      **bitcoind -regtest -daemon**
+    <pre><code>pip install python-bitcoinrpc</code></pre>
 
-Step 2: Run the Legacy Transaction Script
+    <h3>Configure Bitcoin Core</h3>
+    <p>Locate the <code>bitcoin.conf</code> file (usually in <code>~/.bitcoin/bitcoin.conf</code> on Linux/macOS or <code>C:\Users\YourUser\AppData\Roaming\Bitcoin\bitcoin.conf</code> on Windows).</p>
+    
+    <p>Add the following configuration for regtest mode:</p>
+    <pre><code>
+regtest=1
+server=1
+rpcuser=your_rpc_user
+rpcpassword=your_rpc_password
+rpcport=18443
+txindex=1
+    </code></pre>
 
-     **python legacy_transactions.py**
+    <p>Start bitcoind in regtest mode:</p>
+    <pre><code>bitcoind -regtest -daemon</code></pre>
 
-This will:
+    <hr>
 
-Create a wallet
+    <h2>Running the Project</h2>
 
-Generate addresses A, B, C
+    <h3>Step 1: Start Bitcoin Daemon</h3>
+    <pre><code>bitcoind -regtest -daemon</code></pre>
 
-Fund address A
+    <h3>Step 2: Run the Legacy Transaction Script</h3>
+    <pre><code>python legacy_transactions.py</code></pre>
 
-Create a transaction from A → B
+    <p>This will:</p>
+    <ul>
+        <li>Create a wallet</li>
+        <li>Generate addresses A, B, C</li>
+        <li>Fund address A</li>
+        <li>Create a transaction from A → B</li>
+        <li>Create a transaction from B → C</li>
+        <li>Decode and analyze transactions</li>
+    </ul>
 
-Create a transaction from B → C
+    <h3>Step 3: Run the SegWit Transaction Script</h3>
+    <pre><code>python segwit_transactions.py</code></pre>
 
-Decode and analyze transactions
+    <p>This follows the same process as above but using P2SH-SegWit addresses.</p>
 
-Step 3: Run the SegWit Transaction Script
+    <h3>Step 4: Analyze Transactions</h3>
+    <ul>
+        <li>Check decoded transactions in the output.</li>
+        <li>Use Bitcoin Debugger to verify script execution.</li>
+    </ul>
 
-python segwit_transactions.py
+    <hr>
 
-This follows the same process as above but using P2SH-SegWit addresses.
+    <h2>Expected Output</h2>
 
-Step 4: Analyze Transactions
+    <p>Upon running the scripts, you should see:</p>
+    <ul>
+        <li><strong>Wallet and Address Creation</strong></li>
+        <li><strong>Transaction IDs for A → B and B → C</strong></li>
+        <li><strong>Decoded Scripts (locking & unlocking mechanisms)</strong></li>
+        <li><strong>Transaction size comparison between Legacy and SegWit</strong></li>
+    </ul>
 
-Check decoded transactions in the output.
+    <hr>
 
-Use Bitcoin Debugger to verify script execution.
+    <h2>Submission Details</h2>
+    <ul>
+        <li><strong>GitHub Repository:</strong> <a href="#">Your Repo Link</a></li>
+        <li><strong>Report:</strong> Attached in the repository with screenshots and analysis.</li>
+    </ul>
+
+    <p>For any issues, refer to <a href="https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line/blob/master/18_0_Talking_to_Bitcoind_Other.md">Bitcoin Command Line Guide</a>.</p>
+
+</body>
+</html>
