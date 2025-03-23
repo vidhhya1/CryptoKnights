@@ -1,6 +1,6 @@
-<h1>Bitcoin Scripting Assignment</h1>
+** Bitcoin Scripting Assignment ** 
 
-    <h2>CS 216: Introduction to Blockchain</h2>
+    
 
     <h3>Assignment 3: Bitcoin Scripting</h3>
 
