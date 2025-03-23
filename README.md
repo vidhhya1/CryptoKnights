@@ -10,44 +10,27 @@
 
 ## Overview  
 This project demonstrates the creation and validation of Bitcoin transactions using:
+  1.Legacy (P2PKH) Transactions
+  2.SegWit (P2SH-P2WPKH) Transactions
 
-Legacy (P2PKH) Transactions
+We use Bitcoin Core (bitcoind) in regtest mode and Python scripts to interact with it via RPC calls.  <br>
+The project includes:
+ Setting up a Bitcoin regtest network.
+ Creating wallets and generating addresses.
+ Funding transactions and analyzing scripts.
+ Comparing transaction sizes between Legacy and SegWit formats.
 
-SegWit (P2SH-P2WPKH) Transactions
 
-We use Bitcoin Core (bitcoind) in regtest mode and Python scripts to interact with it via RPC calls. The project includes:
-
-Setting up a Bitcoin regtest network.
-
-Creating wallets and generating addresses.
-
-Funding transactions and analyzing scripts.
-
-Comparing transaction sizes between Legacy and SegWit formats.
-## Features  
-- Connect to `bitcoind` using RPC  
-- Create and load a Bitcoin wallet  
-- Generate three **legacy addresses** (A, B, and C)  
-- **Fund Address A** by mining blocks  
-- **Create and sign a transaction** from A → B → C  
-- Decode transactions and extract **locking (ScriptPubKey) and unlocking (ScriptSig) scripts**  
-- Analyze and validate Bitcoin scripts  
-
-## Requirements  
-Ensure you have the following installed:  
-1. **Bitcoin Core** (bitcoind)  
-2. **Python 3**  
-3. **Dependencies:**
 
 ## Running the Project ##
 
 Step 1: Start Bitcoin Daemon
 
-bitcoind -regtest -daemon
+      **bitcoind -regtest -daemon**
 
 Step 2: Run the Legacy Transaction Script
 
-python legacy_transactions.py
+     **python legacy_transactions.py**
 
 This will:
 
