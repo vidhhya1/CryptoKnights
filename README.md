@@ -37,4 +37,40 @@ Comparing transaction sizes between Legacy and SegWit formats.
 Ensure you have the following installed:  
 1. **Bitcoin Core** (bitcoind)  
 2. **Python 3**  
-3. **Dependencies:**  
+3. **Dependencies:**
+
+## Running the Project ##
+
+Step 1: Start Bitcoin Daemon
+
+bitcoind -regtest -daemon
+
+Step 2: Run the Legacy Transaction Script
+
+python legacy_transactions.py
+
+This will:
+
+Create a wallet
+
+Generate addresses A, B, C
+
+Fund address A
+
+Create a transaction from A → B
+
+Create a transaction from B → C
+
+Decode and analyze transactions
+
+Step 3: Run the SegWit Transaction Script
+
+python segwit_transactions.py
+
+This follows the same process as above but using P2SH-SegWit addresses.
+
+Step 4: Analyze Transactions
+
+Check decoded transactions in the output.
+
+Use Bitcoin Debugger to verify script execution.
