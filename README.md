@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitcoin Scripting Assignment</title>
-</head>
-<body>
-
-    <h1>Bitcoin Scripting Assignment</h1>
+<h1>Bitcoin Scripting Assignment</h1>
 
     <h2>CS 216: Introduction to Blockchain</h2>
 
@@ -110,13 +101,4 @@ txindex=1
 
     <hr>
 
-    <h2>Submission Details</h2>
-    <ul>
-        <li><strong>GitHub Repository:</strong> <a href="#">Your Repo Link</a></li>
-        <li><strong>Report:</strong> Attached in the repository with screenshots and analysis.</li>
-    </ul>
-
-    <p>For any issues, refer to <a href="https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line/blob/master/18_0_Talking_to_Bitcoind_Other.md">Bitcoin Command Line Guide</a>.</p>
-
-</body>
-</html>
+    
